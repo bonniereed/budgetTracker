@@ -1,14 +1,14 @@
 let db;
 let budget;
 
-mongoose.connect(
-    process.env.PORT || '0.0.0.0' || 'mongodb://localhost/budget',
-    {
-        useNewUrlParser: true,
-        useFindAndModify: false,
-        useUnifiedTopology: true,
-    }
-);
+// mongoose.connect(
+//     process.env.PORT || '0.0.0.0' || 'mongodb://localhost/budget',
+//     {
+//         useNewUrlParser: true,
+//         useFindAndModify: false,
+//         useUnifiedTopology: true,
+//     }
+// );
 
 const summon = indexedDB.open('budgetDB', budget);
 
