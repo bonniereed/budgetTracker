@@ -2,7 +2,7 @@ let db;
 let budget;
 
 mongoose.connect(
-    process.env.HOST || '0.0.0.0' || 'mongodb://localhost/budget',
+    process.env.PORT || '0.0.0.0' || 'mongodb://localhost/budget',
     {
         useNewUrlParser: true,
         useFindAndModify: false,
