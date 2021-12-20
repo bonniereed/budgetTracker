@@ -1,6 +1,12 @@
 let db;
 let budget;
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/budget', {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+});
+
 const summon = indexedDB.open('budgetDB', budget);
 
 summon.onupgradeneeded = function (event) {
